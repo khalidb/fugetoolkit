@@ -3,11 +3,19 @@
 
 = Prerequisite Software =
 To install the toolkit locally on your machine you will need the following software.
-* Java Development Kit, the software was tested with jdk1.6.0_05.
-* [http://tomcat.apache.org/ Tomcat Apache] used as a container for the Data Access Web Application, the toolkit was tested with Tomcat 6.0. In the following we refer to the directory in which Tomcat is deployed by TOMCAT_HOME.
-* The [http://exist.sourceforge.net/ eXist database system] for storing captured experiments, the toolkit was tested with eXist 1.2.0.
-* The [http://sourceforge.net/projects/pedro PEDRo data capture tool]. In the following we use PEDRo_HOME to refer to the directory in which PEDRo is deployed.
+  * Java Development Kit, the software was tested with jdk1.6.0_05.
+  * [http://tomcat.apache.org Tomcat Apache] used as a container for the Data Access Web Application, the toolkit was tested with Tomcat 6.0. In the following we refer to the directory in which Tomcat is deployed by _TOMCAT_HOME_.
+  * The [http://exist.sourceforge.net eXist database system] for storing captured experiments, the toolkit was tested with eXist 1.2.0.
+  * The [http://sourceforge.net/projects/pedro PEDRo data capture tool]. In the following we use _PEDRo_HOME_ to refer to the directory in which PEDRo is deployed.
+----
 
+= Installing the Toolkit =
+The following presents the steps for installing the toolkit.
+  * Download the _FuGEToolkit.zip_ file from the download web page.
+  * Unzip the file into a directory of your choice. You will find the following files as a result: _proteomics.war_, _namespacemodifier.jar_ and a directory named _ PedroModels _.
+  * Deploy the PEDRo models by putting the sub-directories of the _ PedroModels _ directory into _PEDRo_HOME/models_. The PedroModels directory contains two models: _GelML_ and _spML_.
+  * Deploy the data access web application, _proteomics.war_, in the Tomcat container. This can be done by moving the _proteomics.war_ file into the directory _TOMCAT_HOME/webapps_. The Tomcat container will automatically deploy the web application.
+  * Before you can use the data access web application, you will need to edit the file _TOMCAT_HOME/webapps/proteomics/WEB-INF/web.xml_ to set information necessary to access the eXist database. Specifically the values of the following parameters may need to be edited according to your settings: _dbDriver_, the driver used for accessing the eXist database, you will not need to change the value of this parameter unless you opt for an XML database server other than eXist; _dbServerName_, this is the URL of the eXist server, e.g., _exist://localhost:8680/exist/xmlrpc/_; _dbCollectionName_ the name of the collection that will be accessed, e.g., _proteomics_; _username_ and _password_ are respectively the user name and the password needed for accessing the collection at the eXist database server.
 
 
 = Introduction =
