@@ -1,4 +1,4 @@
-# People
+# People people involved
 
 = People =
   * [http://www.cs.man.ac.uk/~khalidb Khalid Belhajjame], School of Computer Science, University of Manchester
