@@ -32,7 +32,7 @@ _java -jar namespacemodifier.jar fuge.xsd experiment.xml fugeexperiment.xml_
 
 _fuge.xsd_ is the XML Schema of the FuGE model, _experiment.xml_ is the XML document exported using the PEDRo tool and the _fugeexperiment_ is the XML Document output by this command and which is a FuGE compliant experiment.
 
-Using the Data Access Web Application, the user can browse the experiments s/he captures. If your Tomcat is deployed locally on your machine on the port "8080", then you can visit the web page for browsing GelML experiments at http://localhost:8080/proteomics/index.jsp?application=Fuge%20Proteome%20Database&directory=Browse Gel%20Data&file=index.jsp. This web page contains a set of pre-defined canned queries (see Figure 2). 
+Using the Data Access Web Application, the user can browse the experiments s/he captures. If your Tomcat is deployed locally on your machine on the port "8080", then you can visit the web page for browsing GelML experiments at http://localhost:8080/proteomics/index.jsp?application=Fuge%20Proteome%20Database&directory=Browse%20Gel%20Data&file=index.jsp. This web page contains a set of pre-defined canned queries (see Figure 2). 
 
 [http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/queries_screenshot.PNG http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/queries_screenshot_small.PNG]
 
