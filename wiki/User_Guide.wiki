@@ -22,7 +22,8 @@ The following presents the steps for installing the toolkit.
 
 To capture GelML data you can use PEDRo data capture tool. For more information about the use of the PEDRo tool, users are referred to the [http://pedro.cs.manchester.ac.uk/ PEDRo web site]. It is worth noting that the Pedro models for GelML and spML come with a plug-in for facilitating the capture of references within experiments. Indeed, there may be several cross-references between the elements of a GelML or spML experiments, e.g., the attribute _Software_ref_ of the element Provider has as a value the identifier of a _Software_ element. Manually specifying these references can be time consuming: the user will have to fetch the referenced elements within the experiment. The plug-in we developed aims to facilitate this task; it automatically fetches the identifiers of the referenced elements within the GelML experiment and displays them as a drop down list. The user may then choose an item from the list to be used as a value. For example, Figure 1 illustrates the drop down list displayed by the plugin and which contains the items that can be used as a value for the _Software_ref_ attribute of the Provider element. 
 
-http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/plugin.PNG
+[http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/plugin.PNG http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/plugin_small.PNG]
+
 Figure 1: PEDRo plug-in for editing cross references in a GelML experiment.
 
 Once you finished editing a GelML experiment you can export it as an XML document (A documentation on the use of the eXist database can be found [http://exist.sourceforge.net/quickstart.html here]). Exported XML documents can be then stored within the eXist database. Before doing so, users will need to use the tool namespacemodifier.jar that come with the toolkit. This tool is used to convert the namespace of certain elements in the XML document exported by PEDRo to make it a valid FuGE XML document. The following command line shows how the tool can be used.
@@ -33,12 +34,14 @@ _fuge.xsd_ is the XML Schema of the FuGE model, _experiment.xml_ is the XML docu
 
 Using the Data Access Web Application, the user can browse the experiments s/he captures. If your Tomcat is deployed locally on your machine on the port "8080", then you can visit the web page for browsing GelML experiments at http://localhost:8080/proteomics/index.jsp?application=Fuge%20Proteome%20Database&directory=Browse Gel%20Data&file=index.jsp. This web page contains a set of pre-defined canned queries (see Figure 2). 
 
-http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/queries_screenshot.PNG
+[http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/queries_screenshot.PNG http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/queries_screenshot_small.PNG]
+
 Figure 2: Canned queries provided for browsing GelML Experiments.
 
 Using these queries users can retrieve: (i) general information regarding the conditions under which gel experiments were performed; (ii) information about gel locations (a.k.a. spots or bands), e.g., the user may request information about the gel locations that were detected in a given gel; and (iii) information about gels, e.g., Figure 3 shows the results returned when requesting information about available gels. 
 
-http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/results_screenshot.PNG
+[http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/results_screenshot.PNG  http://www.cs.man.ac.uk/~khalidb/FuGEDataCaptureAndSharingToolkit/style/results_screenshot_small.PNG]
+
 Figure 3: Screenshot of the web page used for browsing GelML Experiments.
 ----
 
@@ -47,4 +50,3 @@ Figure 3: Screenshot of the web page used for browsing GelML Experiments.
 You can use the toolkit for capturing and browsing experiments that are specified in your own FuGE extension, just like we did with GelML. For this, you will first need to specify the XML Schema of your FuGE extension. Using this XML Schema you can create a PEDRo model as described [http://pedrodownload.man.ac.uk/PedroTutorials/MainTutorial.html here]. You then need to specify XQuery queries for browsing the experiments specified according to that model. The obtained XQuery are to be embed in JSP files. Examples of JSP files that include XQuery queries are supplied for GelML at _TOMCAT_HOME/webapps/proteomics/Fuge Proteome Database/Browse Gel Data_. You can use these files as templates for specifying you own canned queries.
 
 If you have a query regarding the use of the toolkit then please feel free to contact [mailto:Khalid.Belhajjame@manchester.ac.uk Khalid Belhajjame]. 
-
