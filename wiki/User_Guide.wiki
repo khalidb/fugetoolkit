@@ -1,0 +1,26 @@
+#summary This guide provides information useful for installing and using the toolkit.
+#labels Phase-Implementation
+
+= Prerequisite Software =
+To install the toolkit locally on your machine you will need the following software.
+* Java Development Kit, the software was tested with jdk1.6.0_05.
+* [http://tomcat.apache.org/ Tomcat Apache] used as a container for the Data Access Web Application, the toolkit was tested with Tomcat 6.0. In the following we refer to the directory in which Tomcat is deployed by TOMCAT_HOME.
+* The [http://exist.sourceforge.net/ eXist database system] for storing captured experiments, the toolkit was tested with eXist 1.2.0.
+* The [http://sourceforge.net/projects/pedro PEDRo data capture tool]. In the following we use PEDRo_HOME to refer to the directory in which PEDRo is deployed.
+
+
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+
+
