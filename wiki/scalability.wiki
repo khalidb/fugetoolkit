@@ -1,4 +1,4 @@
-#Scalability of the system
+=Scalability of the system=
 
 Users may wonder how well the system scale. That is how _eXist_, the XML database system, we use for the storage and retrieval of experiments can scale. To assess the scalability of this database system we conducted an experiment with the objective of measuring the evaluation time required for processing the canned queries provided by our tool. Specifically, we considered the following two queries:
 
