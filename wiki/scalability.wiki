@@ -2,9 +2,9 @@
 
 Users may wonder how well the system scale. That is how _eXist_, the XML database system, we use for the storage and retrieval of experiments can scale. To assess the scalability of this database system we conducted an experiment with the objective of measuring the evaluation time required for processing the canned queries provided by our tool. Specifically, we considered the following two queries:
 
-* Query 1: Retrieve the experiment identified by a string that is specified by the user.
+  * Query 1: Retrieve the experiment identified by a string that is specified by the user.
 
-* Query 2: Retrieve the gels from which at least 1 gel location was excised.
+  * Query 2: Retrieve the gels from which at least 1 gel location was excised.
 
 Query 1 is a simple query in the sense that it does not involve any join and the retrieval condition involves only one attribute, identifier, which is an attribute of the root element of a GelML experiment. Query 2, on the other hand, is more complex since it requires two joins to associate a given gel with the locations that were excised. We measured the evaluation time required for processing both Query 1 and Query 2 when the database contains small and large number of GelML experiments. A GelML experiments contains in average around 100 XML elements. The evaluation time is the time required for compiling the query plus the time required for its evaluation. Figure 1 illustrates the results of this experiment. It shows that the time required for processing both queries is the same, 31 ms, in the presence of up to 200 GelML experiments in the database. In the presence of 10000 GelML experiments, which is a large number, the evaluation of Query 1 requires 297 ms whereas Query 2 requires 1406 ms. This shows that when the database scales well in the presence of large number of experiments as the evaluation the complex query, that is Query 2, requires less that a second and a half. 
 
