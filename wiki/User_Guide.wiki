@@ -26,6 +26,8 @@ To capture GelML data you can use PEDRo data capture tool. For more information 
 
 Figure 1: PEDRo plug-in for editing cross references in a GelML experiment.
 
+When using Pedro, it is possible to have an exception stating that the plugin classes were compiled with Java 5. To fix this, you can edit the Pedro batch files to use a locally installed Java of a sensible version (5 or 6). 
+
 Once you finished editing a GelML experiment you can export it as an XML document (A documentation on the use of the eXist database can be found [http://exist.sourceforge.net/quickstart.html here]). Exported XML documents can be then stored within the eXist database. Before doing so, users will need to use the tool namespacemodifier.jar that come with the toolkit. This tool is used to convert the namespace of certain elements in the XML document exported by PEDRo to make it a valid FuGE XML document. The following command line shows how the tool can be used.
 
 _java -jar namespacemodifier.jar fuge.xsd experiment.xml fugeexperiment.xml_
