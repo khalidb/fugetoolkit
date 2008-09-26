@@ -2,5 +2,8 @@
 
 = People =
   * [http://www.cs.man.ac.uk/~khalidb Khalid Belhajjame], School of Computer Science, University of Manchester
-  * [mailto:Andrew.Jones@liverpool.ac.uk Andrew R. Jones], Faculty of Veterinary Science, University of Liverpool
-  * [http://www.cs.man.ac.uk/~norm Norman W. Paton], School of Computer Science, University of Manchester
+  * Andrew R. Jones, Faculty of Veterinary Science, University of Liverpool
+  * Norman W. Paton, School of Computer Science, University of Manchester
+
+
+If you have a question or an issue using the tool, then please contact Khalid(at)Belhajjame(dot)cs(dot)man(dot)ac(dot)uk.
